@@ -10,6 +10,11 @@ app.use(cors());
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("DriveSafe backend is running!");
+});
+
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
   dbName: "DriveSafe",

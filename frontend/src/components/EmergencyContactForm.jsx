@@ -12,7 +12,7 @@ export default function EmergencyContactForm() {
   const data = { yourName, contactName, contactNumber };
 
   try {
-    const res = await fetch("http://localhost:5000/api/emergency-contact", {
+    const res = await fetch("https://drivesafe-api-o7nn.onrender.com/api/emergency-contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data), // ✅ fixed
